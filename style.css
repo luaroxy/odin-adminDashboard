@@ -1,2 +1,63 @@
 @import url(normalize.css);
 
+.container {
+    display: grid;
+    grid: 1fr 4.5fr / 1fr 3.5fr;
+    height: 100vh;
+  }
+
+  .header {
+    background-color: #fdfdfd;
+    grid-column: 2 / 3;
+    display: grid;
+    grid: 1fr 1fr / 2fr 1fr;
+    padding-left: 15px;
+  }
+
+  .sidebar {
+    background-color: #2eac14a8;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: white;
+    padding-left: 15px;
+  }
+
+  .main-content {
+    background-color: #6e96e059;
+    grid: 2/2/3/3;
+    display: grid;
+    grid-template-columns: 2.3fr 1fr;
+    padding-left: 15px;
+    gap: 15px;
+  }
+
+  .projects-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  .card {
+    background-color: #fcf954d8;
+    color: black;
+    border-left: 10px solid #2eac14a8;
+    text-align: center;
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  .annouc-trend{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-right: 15px;
+  }
+
+  .annouc-content, .trend-content{
+      display: grid;
+      grid: 1fr;
+      background-color: #fcf954d8;
+      border-radius: 10px;
+  }
