@@ -6,12 +6,23 @@
     height: 100vh;
   }
 
+  ul{
+    list-style-type: none;
+    padding: 5px;
+  }
+  
+  p{
+    margin: 0;
+  }
   .header {
-    background-color: #fdfdfd;
+    background-color: #fcf95491;
     grid-column: 2 / 3;
     display: grid;
-    grid: 1fr 1fr / 2fr 1fr;
+    grid: 1fr 1fr / 1.5fr 1fr;
     padding-left: 15px;
+    box-shadow: 5px 10px 8px #88888842;
+    gap: 15px;
+    padding: 15px;
   }
 
   .sidebar {
@@ -19,9 +30,69 @@
     grid-row: 1 / 3;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 30px;
     color: white;
-    padding-left: 15px;
+    padding: 15px;
+  }
+
+  .sidebar-top, .top-profile, .buttons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .top-profile, .buttons{
+    justify-content: end;
+    padding-right: 100px;
+  }
+
+
+  .item, .search-bar, .profile-info, .player{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .sidebar-top img{
+      width: 40px;
+  }
+
+  .top-profile img:first-child, .action-options img{
+    width: 25px;
+  }
+
+  .top-profile img:nth-child(2), .player img{
+    width: 40px;
+    border-radius: 20px;
+  }
+
+  .profile-info img{
+    width: 60px;
+    border-radius: 30px;
+  }
+
+  .profile-info div p{
+    margin: 0;
+  }
+
+  .item img{
+    width: 30px;
+  }
+
+  .search-bar img{
+    width: 30px;
+  }
+
+  input{
+    width: 100%;
+  }
+
+  button{
+    background-color: #2eac14a8;
+    color: white;
+    border-radius: 15px;
+    padding: 5px 20px;
+    font-size: 0.9em;
   }
 
   .main-content {
@@ -29,23 +100,30 @@
     grid: 2/2/3/3;
     display: grid;
     grid-template-columns: 2.3fr 1fr;
-    padding-left: 15px;
+    padding: 15px;
     gap: 15px;
   }
 
-  .projects-cards {
+  .honours-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
   }
 
   .card {
-    background-color: #fcf954d8;
+    background-color: #fcf95491;
     color: black;
     border-left: 10px solid #2eac14a8;
-    text-align: center;
     height: 200px;
     border-radius: 10px;
+    padding: 10px;
+  }
+
+  .card p, .card span{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin: 0;
   }
 
   .annouc-trend{
@@ -56,8 +134,26 @@
   }
 
   .annouc-content, .trend-content{
-      display: grid;
-      grid: 1fr;
-      background-color: #fcf954d8;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      background-color: #fcf95491;
       border-radius: 10px;
+      padding: 20px;
+  }
+
+  .line{
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #6e96e059;
+  }
+
+  .card p, .annouc-content p{
+    font-weight: bold;
+  }
+
+  .action-options{
+    display: flex;
+    justify-content: end;
+    gap: 15px;
   }
