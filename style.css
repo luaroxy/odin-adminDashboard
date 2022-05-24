@@ -1,32 +1,104 @@
 @import url(normalize.css);
 
+@font-face {
+  font-family: 'OxaniumRegular';
+  src: url(fonts/Oxanium-Regular.ttf);
+}
+
+*{
+  font-family: 'Oxanium-Regular';
+  letter-spacing: .05rem;
+}
+
 .container {
     display: grid;
-    grid: 1fr 4.5fr / 1fr 3.5fr;
+    grid: 1fr 4.5fr / 1fr 4fr;
     height: 100vh;
   }
 
   ul{
     list-style-type: none;
-    padding: 5px;
+    padding: 0.25rem;
   }
   
   p{
     margin: 0;
   }
+
+  /*Header*/
   .header {
-    background-color: #fcf95491;
+    background-color: #fef08a;
     grid-column: 2 / 3;
     display: grid;
-    grid: 1fr 1fr / 1.5fr 1fr;
-    padding-left: 15px;
-    box-shadow: 5px 10px 8px #88888842;
-    gap: 15px;
-    padding: 15px;
+    grid-template-columns: 1.5fr 1fr;
+    box-shadow: 0px 8px 8px #88888861;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 10;
   }
 
+  .search-bar img{
+    width: 1.5rem;
+    display: flex;
+  }
+
+  input{
+    width: 80%;
+    border-radius: 1rem;
+    background-color: #bfdbfe    ;
+  }
+
+  .top-profile, .buttons{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: end;
+  }
+
+  .top-profile img:first-child, .action-options img{
+    width: 1.3rem;
+  }
+
+  .top-profile img:nth-child(2), .player img{
+    width: 2.2rem;
+    border-radius: 50%;
+  }
+
+  .top-profile{
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.01rem;
+  }
+
+  .profile-info img{
+    width: 4rem;
+    border-radius: 50%;
+  }
+
+  .profile-info div p:first-child{
+    margin: 0;
+    font-size: 0.75rem;
+  }
+
+  .profile-info div p:nth-child(2){
+    margin: 0;
+    font-size: 1rem;
+    font-weight:700;
+  }
+
+  button{
+    background-color: #22c55e;
+    color: white;
+    border-radius: 1rem;
+    padding: 0.4rem 1.5rem;
+    font-size: 0.9em;
+    font-weight: 600;
+  }
+
+  /*Sidebar*/
   .sidebar {
-    background-color: #2eac14a8;
+    background-color: #22c55e;
     grid-row: 1 / 3;
     display: flex;
     flex-direction: column;
@@ -35,17 +107,13 @@
     padding: 15px;
   }
 
-  .sidebar-top, .top-profile, .buttons{
+  .sidebar-top{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.8rem;
+    font-size: 1.5rem;
+    font-weight: 550;
   }
-
-  .top-profile, .buttons{
-    justify-content: end;
-    padding-right: 100px;
-  }
-
 
   .item, .search-bar, .profile-info, .player{
     display: flex;
@@ -57,46 +125,13 @@
       width: 40px;
   }
 
-  .top-profile img:first-child, .action-options img{
-    width: 25px;
-  }
-
-  .top-profile img:nth-child(2), .player img{
-    width: 40px;
-    border-radius: 20px;
-  }
-
-  .profile-info img{
-    width: 60px;
-    border-radius: 30px;
-  }
-
-  .profile-info div p{
-    margin: 0;
-  }
-
   .item img{
     width: 30px;
   }
 
-  .search-bar img{
-    width: 30px;
-  }
-
-  input{
-    width: 100%;
-  }
-
-  button{
-    background-color: #2eac14a8;
-    color: white;
-    border-radius: 15px;
-    padding: 5px 20px;
-    font-size: 0.9em;
-  }
-
+  /*Main Content*/
   .main-content {
-    background-color: #6e96e059;
+    background-color:#bfdbfe;
     grid: 2/2/3/3;
     display: grid;
     grid-template-columns: 2.3fr 1fr;
@@ -104,17 +139,20 @@
     gap: 15px;
   }
 
+  .c-title{
+    margin-bottom: 15px;
+  }
   .honours-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    grid-auto-rows: 1fr;
     gap: 15px;
   }
 
   .card {
-    background-color: #fcf95491;
+    background-color: #fef08a;
     color: black;
-    border-left: 10px solid #2eac14a8;
-    height: 200px;
+    border-left: 10px solid #22c55e;
     border-radius: 10px;
     padding: 10px;
     display: flex;
@@ -140,7 +178,7 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
-      background-color: #fcf95491;
+      background-color: #fef08a;
       border-radius: 10px;
       padding: 20px;
   }
