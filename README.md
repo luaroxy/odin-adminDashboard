@@ -1,5 +1,5 @@
 # Admin Dashboard
-<a href="https://luaroxy.github.io/admin-dashboard/">Live Demo </a>
+<a href="https://luaroxy.github.io/odin-adminDashboard/">Live Demo </a>
 
 # About the Project
 Admin Dashboard created using CSS Grid Layout
